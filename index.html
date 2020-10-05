@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <h1>Cores de São Paulo</h1>
+    <p>
+        Quer saber mais detalhes? Selecione a foto aqui:
+        <select name="select" id="select" onchange="comecar()">
+            <option value="nenhum"></option>
+            <option value="Foto1">Foto 1</option>
+            <option value="Foto2">Foto 2</option>
+            <option value="Foto3">Foto 3</option>
+            <option value="Foto4">Foto 4</option>
+            <option value="Foto5">Foto 5</option>
+        </select>
+    </p>
+    <div id="descricao"></div>
+    <script>
+        function comecar(){
+        let descricao = document.getElementById("descricao");
+        let select = document.getElementById("select").value;
+        let foto1 = document.getElementById("foto1");
+        let foto2 = document.getElementById("foto2");
+        let foto3 = document.getElementById("foto3");
+        let foto4 = document.getElementById("foto4");
+        let foto5 = document.getElementById("foto5");
+
+        if(select == ("Foto1")){
+            descricao.innerHTML = "A Ponte Octávio Frias de Oliveira é uma ponte estaiada localizada na cidade de São Paulo, estado de São Paulo, Brasil. A ponte, que faz parte do Complexo Viário Real Parque, é formada por duas pistas estaiadas em curvas independentes de 60º que cruzam o rio Pinheiros, no bairro do Brooklin, sendo a única ponte estaiada do mundo com duas pistas em curva conectadas a um mesmo mastro. Foi inaugurada em 10 de maio de 2008, após três anos de construção,e hoje é um dos mais famosos cartões postais da cidade."
+            foto1.style.display = "block";
+            foto2.style.display = "none";
+            foto3.style.display = "none";
+            foto4.style.display = "none";
+            foto5.style.display = "none";
+        }
+        if(select == ("Foto2")){
+            descricao.innerHTML = "O Theatro Municipal de São Paulo é um dos mais importantes teatros do Brasil e um dos cartões postais da cidade de São Paulo. Localizado no centro da cidade, na Praça Ramos de Azevedo, foi inaugurado em 1911 para atender ao desejo da elite paulista da época, que queria que a cidade estivesse à altura dos grandes centros culturais."
+            foto2.style.display = "block";
+            foto1.style.display = "none";
+            foto3.style.display = "none";
+            foto4.style.display = "none";
+            foto5.style.display = "none";
+        }
+        if(select == ("Foto3")){
+            descricao.innerHTML = "Catedral Metropolitana de São Paulo ou Catedral da Sé, é a catedral da Arquidiocese de São Paulo, Brasil. Localiza-se na Praça da Sé, na Zona Central do município de São Paulo."
+            foto3.style.display = "block";
+            foto1.style.display = "none";
+            foto2.style.display = "none";
+            foto4.style.display = "none";
+            foto5.style.display = "none";
+        }
+        if(select == ("Foto4")){
+            descricao.innerHTML = "O Parque Ibirapuera é um parque urbano localizado na cidade de São Paulo, Brasil. Em 2017, foi o parque mais visitado da América Latina, com aproximadamente 14 milhões de visitas, além de ser um dos locais mais fotografados do mundo. "
+            foto4.style.display = "block";
+            foto1.style.display = "none";
+            foto2.style.display = "none";
+            foto3.style.display = "none";
+            foto5.style.display = "none";
+        }
+        if(select == ("Foto5")){
+            descricao.innerHTML = "Edifício grafitado por Rui Amaral, um artista plástico multimídia, percursores do grafite paulistano, começou sua carreira na Década de 1980"
+            foto5.style.display = "block";
+            foto1.style.display = "none";
+            foto2.style.display = "none";
+            foto3.style.display = "none";
+            foto4.style.display = "none";
+        }
+        if(select == ("nenhum")){
+            descricao.innerHTML = " "
+            foto1.style.display = "block";
+            foto2.style.display = "block";
+            foto3.style.display = "block";
+            foto4.style.display = "block";
+            foto5.style.display = "block";
+        }
+    }
+    </script>
+
+    <div class="galeria">
+        <img class="fotos" id="foto3" src="imagens/catedralSe.jpg" alt="catedral da Sé"> 
+        <img class="fotos" id="foto4" src="imagens/ibirapuera-park.jpg" alt="Fontes do Parque Ibirapuera">
+        <img class="fotos" id="foto5" src="imagens/rui-amaral-sp.jpg" alt="Prédio centro de São Paulo Pixado">
+        <img class="fotos" id="foto1" src="imagens/ponteEstaida.jpg" alt="Ponte Estaiada">
+        <img class="fotos" id="foto2" src="imagens/teatroMunicipal.jpg" alt="Teatro Municipal">
+    </div>
+</body>
+</html>

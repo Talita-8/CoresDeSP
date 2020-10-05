@@ -1,0 +1,69 @@
+body{
+    background-image: url("imagens/fundoSP.jpg");
+}
+h1{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-size: 50px;
+    text-align: center;
+}
+p{
+    font-size: 23px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: oblique;
+    text-align: center;
+    color:white;
+}
+#descricao{
+    display: flex;
+    font-size: 30px;
+    text-align: justify;
+    color: white;
+    background-color: rgb(105, 107, 107);
+}
+.galeria{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 5vw);
+    grid-gap: 15px;
+    background-color: rgb(58, 57, 57);
+    margin: 5px;
+    padding: 20px;
+}
+.fotos{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+
+#foto3{
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 6;
+}
+#foto4{
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 6;
+    grid-row-end: 9;
+}
+#foto5{
+    grid-column-start: 5;
+    grid-column-end: 9;
+    grid-row-start: 1;
+    grid-row-end: 9;
+}
+#foto1{ 
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+#foto2{ 
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
